@@ -1,0 +1,58 @@
+<section class="grid justify-center">
+
+    <!-- ERROR LOGGING -->
+
+    {{#each errors}}
+        <div class="error">{{this}}</div>
+    {{/each}}
+
+
+    <div>
+
+    <!-- FIX FORM LABEL TRANSFORMATION -->
+
+        <div class="signupFrm">
+            <form method="post" action="/user/registration" class="form">
+                <h1 class="title">Sign up</h1>
+
+                <div class="inputContainer">
+                    <label for="firstName" class="label">First Name</label>
+                    <input type="text" class="input" name="firstName" placeholder="a" value="{{current_form_data.firstName}}" >
+                </div>
+
+                <div class="inputContainer">
+                    <label for="lastName" class="label">Last Name</label>
+                    <input type="text" class="input" name="lastName" placeholder="a" value="{{current_form_data.lastName}}" >
+                </div>
+
+                <div class="inputContainer">
+                    <label for="email" class="label">Email</label>
+                    <input type="email" class="input" name="email" placeholder="a" value="{{current_form_data.email}}" >
+                </div>
+
+                <div class="error">{{emailError}}</div>
+
+                <div class="inputContainer">
+                    <label for="username" class="label">Username</label>
+                    <input type="text" class="input" name="username" placeholder="a" value="{{current_form_data.username}}" >
+                </div>
+
+                <div class="inputContainer">
+                    <label for="password" class="label">Password</label>
+                    <input type="password" class="input" name="password" placeholder="a" >
+                </div>
+
+    <!--
+                <div class="inputContainer">
+                    <label for="confirmPassword" class="label">Confirm Password</label>
+                    <input type="text" class="input" placeholder="a" required>
+                </div>
+    -->
+                <input type="submit" class="submitBtn" value="Sign up">
+            
+            </form>
+        </div>
+
+    </div>
+        
+</section>

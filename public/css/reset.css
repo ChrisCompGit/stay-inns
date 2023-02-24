@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    font: inherit;
+}
+
+.container {
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+	min-height: 100vh;
+    line-height: 1;
+    font-family: 'Karla', sans-serif;
+    background-color: var(--white);
+}

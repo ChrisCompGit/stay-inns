@@ -1,0 +1,60 @@
+<section class="grid justify-center">
+
+    <!-- ERROR LOGGING -->
+
+    {{#each errors}}
+        <div class="error">{{this}}</div>
+    {{/each}}
+
+
+    <div>
+
+    <!-- FIX FORM LABEL TRANSFORMATION -->
+
+        <div class="signupFrm">
+            <form method="post" action="/admin/create-property" class="form" enctype="multipart/form-data" >
+                <h1 class="title">Add a Property</h1>
+
+                <div class="inputContainer">
+                    <label for="title" class="label">Title</label>
+                    <input type="text" class="input" name="title" placeholder="a" value="{{current_form_data.title}}" >
+                </div>
+
+                <div class="inputContainer">
+                    <label for="location" class="label">Location</label>
+                    <input type="text" class="input" name="location" placeholder="a" value="{{current_form_data.location}}" >
+                </div>
+
+                <div class="inputContainer">
+                    <label for="rating" class="label">Rating</label>
+                    <input type="range" class="input" name="rating" placeholder="a" value="{{current_form_data.rating}}" >
+                </div>
+
+                <div class="inputContainer">
+                    <label for="price" class="label">Price</label>
+                    <input type="number" class="input" name="price" placeholder="a" value="{{current_form_data.price}}" >
+                </div>
+
+                <div class="inputContainer">
+                    <label for="type" class="label">Type</label>
+                    <input type="text" class="input" name="type" placeholder="a" value="{{current_form_data.type}}" >
+                </div>
+
+                <div class="inputContainer">
+                    <label for="img" class="label">Image</label>
+                    <input type="file" class="input" name="img" placeholder="a" value="{{current_form_data.img}}">
+                </div>
+
+                <div class="inputContainer">
+                    <label for="details" class="label">Details</label>
+                    <input type="text" class="input" name="details" placeholder="a" value="{{current_form_data.details}}" >
+                </div>
+
+                <input type="submit" class="submitBtn" value="Create Property">
+            
+            </form>
+        </div>
+
+    </div>
+        
+</section>

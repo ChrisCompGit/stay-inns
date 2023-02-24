@@ -1,0 +1,32 @@
+<section>
+
+    <h1>Admin Dashboard</h1>
+    
+    <!-- Property Creation Menu -->
+    <div class="main-margin-top justify-self-center">
+        <ul class="bold reg-font">
+            <li><a href="/admin/add-property">Add a Property</a></li>
+            <li><a href="/admin/edit-property">Edit a Property</a></li>
+            <li><a href="/auth/logout">Logout</a></li>
+        </ul>
+    </div>
+
+
+<!--include an option to delete the property in the div layout-->
+
+    {{#each property}}
+        <div>
+            {{this.title}}
+            {{this.rating}}
+            <!-- FIGURE OUT HOW TO DISPLAY AN IMAGE FROM THE DB -->
+            {{this.img}}
+            {{this.location}}
+            {{this.price}}
+            {{this.type}}
+            {{this.details}}
+            {{this.admin_id}}
+        </div>
+    {{/each}}
+    
+    
+</section>
